@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/track"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrackActivity">
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="10dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="X"
+                />
+            <EditText
+                android:id="@+id/text_x"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:text="0"
+                android:inputType="numberDecimal"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="Y"
+                />
+            <EditText
+                android:id="@+id/text_y"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:text="0"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/backgroundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BACKGROUND"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/predictButtonKnn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="KNN"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"/>
+            <Button
+                android:id="@+id/predictButtonRf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RF"
+                android:layout_marginRight="10dp"
+                android:layout_centerHorizontal="true"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+
+            <Button
+                android:id="@+id/predictFingerKnn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="5dp"
+                android:text="FingerKnn" />
+            
+            <Button
+                android:id="@+id/predictFingerRf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="5dp"
+                android:text="FingerRF" />
+
+            <Button
+                android:id="@+id/predictCNN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="5dp"
+                android:text="CNN" />
+             <Button
+                android:id="@+id/predictGNN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="5dp"
+                android:text="GNN" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errorTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="4dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_red_dark"
+            android:text="" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_below="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.example.vri.custom.IndoorMapMultipleView
+            android:layout_marginTop="8dp"
+            android:id="@+id/indoorMapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </com.example.vri.custom.IndoorMapMultipleView>
+    </RelativeLayout>
+</RelativeLayout>

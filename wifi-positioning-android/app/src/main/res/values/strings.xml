@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">vri</string>
+    <string name="data_type">DataSet Type</string>
+    <string name="test_dataset">Test</string>
+    <string name="validation_dataset">Validation</string>
+    <string name="training_dataset">Training</string>
+</resources>
